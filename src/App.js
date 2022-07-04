@@ -1,11 +1,13 @@
 
-import './App.css';
 
-function App() {
+
+import Header from './Header/Header'; 
+
+function App(props) {
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 

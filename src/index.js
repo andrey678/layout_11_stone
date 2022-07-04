@@ -13,6 +13,11 @@ const defaultTheme = {
     lightSand: "#C7AA8B",
     darkBrown: "#323232",
     darkGray: "#4D4D4D",
+  },
+  fonts: {
+    robotoCondensedRegular: "'Roboto Condensed', sans-serif",
+    vollkornRegular: "'Vollkorn', serif",
+    robotoRegular: "'Roboto', sans-serif"
   }
 
 }
@@ -22,6 +27,7 @@ const Global = createGlobalStyle`
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: ${defaultTheme.fonts.robotoCondensedRegular};
 }
 
 *,
