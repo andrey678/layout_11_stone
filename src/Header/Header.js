@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import Logo from "../img/icons/stoneLogo.svg";
+
 import Container from "../Container/Container";
+import Flex from "../Flex/Flex";
+import Logo from "../Logo/Logo";
+import Menu from "../Menu/Menu";
+import SocialMenu from "../SocialMenu/SocialMenu";
 
 const StyledHeader = styled.header`
-background: ${props => props.background || props.theme.colors.darkBrown};
-width: 100%;
-height: 60px;
-padding: 10px 0;
+    background: ${props => props.background || props.theme.colors.darkBrown};
+    width: 100%;
+    height: 60px;
+   
 `;
 
 const Header = (props) => {
@@ -14,9 +18,14 @@ const Header = (props) => {
 
         <StyledHeader {...props}>
             <Container maxWidth={"940px"}>
-                <a href="#">
-                    <img src={Logo} alt="Stone Logo" />
-                </a>
+                <Flex height={'100%'} justify="space-between">
+                    <Flex>
+                        <Logo />
+                        <Menu />
+                    </Flex>
+                    <SocialMenu />
+                </Flex>
+
             </Container>
         </StyledHeader >
 

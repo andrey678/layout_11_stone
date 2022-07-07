@@ -1,9 +1,6 @@
-
-
-
 import Header from './Header/Header'; 
 
-function App(props) {
+const App = () => {
   return (
     <>
       <Header />
