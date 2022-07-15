@@ -20,7 +20,6 @@ const socialLinks = socialMenuOptions.map(socialOption => {
             </a>
         </SocialMenuItem>
     )
-
 });
 
 const SocialMenu = (props) => {
@@ -29,7 +28,6 @@ const SocialMenu = (props) => {
             <ul>
                 {socialLinks}
             </ul>
-
         </StyledMenu>
     );
 }

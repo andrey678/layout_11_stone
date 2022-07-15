@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { StyledMenuItem } from "../MenuItem/MenuItem";
 
 
@@ -12,4 +13,5 @@ const StyledSocialMenuItem = styled(StyledMenuItem)`
 `;
 
 const SocialMenuItem = (props) => <StyledSocialMenuItem {...props} />;
+
 export default SocialMenuItem;

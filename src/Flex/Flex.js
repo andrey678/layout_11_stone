@@ -6,6 +6,8 @@ const StyledFlex = styled.div`
     justify-content: ${props => props.justify || 'stretch'};
     align-items: ${props => props.align || 'stretch'};
     height: ${props => props.height || 'inherit'};
+    z-index: ${props => props.zIndex || 'initial'};
+  
 `;
 
 

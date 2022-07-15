@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 
 
 import App from './App';
@@ -18,6 +18,12 @@ const defaultTheme = {
     robotoCondensedRegular: "'Roboto Condensed', sans-serif",
     vollkornRegular: "'Vollkorn', serif",
     robotoRegular: "'Roboto', sans-serif"
+  },
+  media: {
+    phone: "(max-width: 425px)",
+    tablet: "(max-width: 768px)",
+    desktop: "(max-width: 992px)",
+    wideDesktop: "(max-width: 1280px)"
   }
 
 }
@@ -104,6 +110,10 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+body[lock]{
+  overflow: hidden;
 }
 
 `;
