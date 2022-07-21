@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-
-
 import App from './App';
 
 // Подключение Проводника тем и Глобальных стилей
@@ -10,23 +8,23 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const defaultTheme = {
   colors: {
-    lightSand: "#C7AA8B",
-    darkBrown: "#323232",
-    darkGray: "#4D4D4D",
+    neutralExtraDark: '#000000',
+    neutralDark: '#323232',
+    neutralLight: '#C7AA8B',
+    neutralTextColor: '#4D4D4D',
   },
   fonts: {
     robotoCondensedRegular: "'Roboto Condensed', sans-serif",
     vollkornRegular: "'Vollkorn', serif",
-    robotoRegular: "'Roboto', sans-serif"
+    robotoRegular: "'Roboto', sans-serif",
   },
   media: {
-    phone: "(max-width: 425px)",
-    tablet: "(max-width: 768px)",
-    desktop: "(max-width: 992px)",
-    wideDesktop: "(max-width: 1280px)"
-  }
-
-}
+    phone: '(max-width: 425px)',
+    tablet: '(max-width: 768px)',
+    desktop: '(max-width: 992px)',
+    wideDesktop: '(max-width: 1280px)',
+  },
+};
 
 const Global = createGlobalStyle`
 * {
@@ -125,7 +123,5 @@ root.render(
       <Global />
       <App />
     </ThemeProvider>
-
   </React.StrictMode>
 );
-

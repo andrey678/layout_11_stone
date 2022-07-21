@@ -1,5 +1,6 @@
 # layout_11_stone
-Practicing with React and Styled Components. 
+
+Practicing with React and Styled Components.
 
 # Getting Started with Create React App
 
