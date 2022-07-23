@@ -1,0 +1,119 @@
+{
+  "header": {
+    "logoImgPath": "assets/images/Header/stoneLogo.svg",
+    "menuOptions": ["Home", "Work", "Contact"],
+    "socialMenuOptions": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com",
+        "imgPath": "assets/images/Header/icons/SocialMenuIcons/facebook.svg"
+      },
+      {
+        "name": "twitter",
+        "url": "https://www.twitter.com",
+        "imgPath": "assets/images/Header/icons/SocialMenuIcons/twitter.svg"
+      }
+    ]
+  },
+  "hero": {
+    "slides": [
+      {
+        "imgPath": "assets/images/Hero/bridge_bcg.png",
+        "title": "WE KEEP THINGS CLEAN AND SIMPLE",
+        "subtitle": "So clean you'll go crazy wondering why it's so clean.",
+        "buttonTitle": "SEE OUR WORK"
+      },
+      {
+        "imgPath": "assets/images/Hero/bridge_bcg.png",
+        "title": "WE KEEP THINGS CLEAN AND SIMPLE",
+        "subtitle": "So clean you'll go crazy wondering why it's so clean.",
+        "buttonTitle": "SEE OUR WORK"
+      },
+      {
+        "imgPath": "assets/images/Hero/bridge_bg.png",
+        "title": "WE KEEP THINGS CLEAN AND SIMPLE",
+        "subtitle": "So clean you'll go crazy wondering why it's so clean.",
+        "buttonTitle": "SEE OUR WORK"
+      }
+    ]
+  },
+  "activities": {
+    "items": [
+      {
+        "title": "RESEARCH",
+        "imgPath": "assets/images/Activities/icons/lamp.svg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum."
+      },
+      {
+        "title": "BUILD",
+        "imgPath": "assets/images/Activities/icons/devices.svg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum."
+      },
+      {
+        "title": "OPTIMIZE",
+        "imgPath": "assets/images/Activities/icons/chartline.svg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum."
+      }
+    ]
+  },
+  "slogan": {
+    "title": "The design process, at its best, integrates the aspirations of art, science, and culture.",
+    "imgPath": "assets/images/Slogan.seawaves_bg.png"
+  },
+  "team": {
+    "title": "THE TEAM",
+    "members": [
+      {
+        "photoPath": "assets/images/Team/PeterWalkin.png",
+        "name": "Peter Walkin",
+        "position": "Founder",
+        "socialMediaLinks": [
+          { "facebook": "https://www.facebook.com" },
+          { "twitter": "https://www.twitter.com" },
+          { "linkedin": "https://www.linkedin.com" }
+        ]
+      },
+      {
+        "photoPath": "assets/images/Team/RobertPorter.png",
+        "name": "Robert Porter",
+        "position": "Developer",
+        "socialMediaLinks": [
+          { "facebook": "https://www.facebook.com" },
+          { "twitter": "https://www.twitter.com" },
+          { "linkedin": "https://www.linkedin.com" }
+        ]
+      },
+      {
+        "photoPath": "assets/images/Team/DinaJohnson.png",
+        "name": "Dina Johnson",
+        "position": "Designer",
+        "socialMediaLinks": [
+          { "twitter": "https://www.twitter.com" },
+          { "behance": "https://www.behance.net" },
+          { "dribbble": "https://www.dribbble.com" },
+          { "instagram": "https://www.instagram.com" }
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "quotes": [
+      {
+        "text": "Vestibulum sed commodo nunc, eu aliquet sem. Curabitur semper, sem ut posuere tincidunt, sem velit sollicitudin odio, quis hendrerit sapien nunc sit amet sem. Ut sollicitudin dignissim ligula nec porta.",
+        "owner": "Robert Shapiro, CEO of Trulr"
+      },
+      {
+        "text": "Curabitur semper, sem ut posuere tincidunt, sem velit sollicitudin odio, quis hendrerit sapien nunc sit amet sem. Ut sollicitudin dignissim ligula nec porta.",
+        "owner": "Lila Stokinova, designer at Nike"
+      }
+    ]
+  },
+  "footer": {
+    "imgPath": "assets/images/Footer/miniLogo.svg",
+    "year": "2014",
+    "companyName": "Stone Creative Agency",
+    "companyEmailLink": "stone@example.com",
+    "companyAddress": "1423 Elk St, Brooklyn NY, 82328"
+  }
+}

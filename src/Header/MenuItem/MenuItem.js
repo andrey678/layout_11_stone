@@ -19,7 +19,7 @@ export const StyledMenuItem = styled.li`
     height: 100%;
 
     &:hover {
-      background: neutralExtraDark;
+      background: ${(props) => props.theme.colors.neutralExtraDark};
       color: ${(props) => props.theme.colors.neutralLight};
     }
 

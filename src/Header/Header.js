@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
   z-index: 10;
 `;
 
-const Header = (props) => {
+const Header = ({ logoImgPath, menuOptions, socialMenuOptions, children }) => {
   // Состояние открытия/закрытия меню
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -32,13 +32,13 @@ const Header = (props) => {
   };
 
   return (
-    <StyledHeader {...props}>
+    <StyledHeader {...children}>
       <Container>
         <Flex height={'100%'} justify='space-between' zIndex='2' align='center'>
-          <Logo />
+          <Logo logoImg={logoImgPath} />
           <MenuWrapper menuOpen={menuOpen}>
-            <Menu />
-            <SocialMenu />
+            <Menu options={menuOptions} />
+            <SocialMenu options={socialMenuOptions} />
           </MenuWrapper>
           <MenuBurgerButton menuOpen={menuOpen} onClick={toggleMenu} />
         </Flex>

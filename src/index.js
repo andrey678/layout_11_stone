@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
+import data from './data/data.json';
 
 // Подключение Проводника тем и Глобальных стилей
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -121,7 +122,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={defaultTheme}>
       <Global />
-      <App />
+      <App data={data} />
     </ThemeProvider>
   </React.StrictMode>
 );

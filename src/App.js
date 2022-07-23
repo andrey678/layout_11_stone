@@ -1,9 +1,10 @@
 import Header from './Header/Header';
 
-const App = () => {
+const App = (props) => {
+  const { header } = props.data;
   return (
     <>
-      <Header />
+      <Header {...header} />
       <>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti,
         blanditiis iusto fugiat totam officiis asperiores consequatur atque esse

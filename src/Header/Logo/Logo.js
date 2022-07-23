@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-import LogoSVG from '../img/icons/Header/stoneLogo.svg';
-
 const StyledLogo = styled.div`
   padding: 10px 0;
 `;
 
-const Logo = (props) => {
+const Logo = ({ logoImg, children }) => {
   return (
-    <StyledLogo {...props}>
+    <StyledLogo {...children}>
       <a href='#Home'>
-        <img src={LogoSVG} alt='Stone Logo' />
+        <img src={logoImg} alt='Stone Logo' />
       </a>
     </StyledLogo>
   );

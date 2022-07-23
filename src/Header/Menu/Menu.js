@@ -2,14 +2,6 @@ import styled from 'styled-components';
 
 import MenuItem from '../MenuItem/MenuItem';
 
-const menuOptions = ['Home', 'Work', 'Contact'];
-
-const links = menuOptions.map((option) => (
-  <MenuItem key={option}>
-    <a href={`#${option}`}>{option}</a>
-  </MenuItem>
-));
-
 export const StyledMenu = styled.nav`
   & ul {
     display: flex;
@@ -27,9 +19,14 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = (props) => {
+const Menu = ({ options, children }) => {
+  const links = options.map((option) => (
+    <MenuItem key={option}>
+      <a href={`#${option}`}>{option}</a>
+    </MenuItem>
+  ));
   return (
-    <StyledMenu {...props}>
+    <StyledMenu {...children}>
       <ul>{links}</ul>
     </StyledMenu>
   );
