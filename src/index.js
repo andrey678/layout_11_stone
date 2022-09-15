@@ -13,6 +13,13 @@ const defaultTheme = {
     neutralDark: '#323232',
     neutralLight: '#C7AA8B',
     neutralTextColor: '#4D4D4D',
+    heroHeadingColor: '#FFFFFF',
+    heroParagraphColor: 'rgba(255, 255, 255, 0.81)',
+    heroButtonBorderColor: '#FFFFFF',
+    heroButtonTextColor: '#FFFFFF',
+    heroButtonBackgroundColor: 'transparent',
+    heroSliderDotColor: 'rgba(255, 255, 255, 0.4);',
+    heroActiveSliderDotColor: 'rgba(255, 255, 255, 1);',
   },
   fonts: {
     robotoCondensedRegular: "'Roboto Condensed', sans-serif",

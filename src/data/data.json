@@ -18,22 +18,25 @@
   "hero": {
     "slides": [
       {
-        "imgPath": "assets/images/Hero/bridge_bcg.png",
+        "imgPath": "assets/images/Hero/bridge_bg.png",
         "title": "WE KEEP THINGS CLEAN AND SIMPLE",
         "subtitle": "So clean you'll go crazy wondering why it's so clean.",
-        "buttonTitle": "SEE OUR WORK"
-      },
-      {
-        "imgPath": "assets/images/Hero/bridge_bcg.png",
-        "title": "WE KEEP THINGS CLEAN AND SIMPLE",
-        "subtitle": "So clean you'll go crazy wondering why it's so clean.",
-        "buttonTitle": "SEE OUR WORK"
+        "buttonTitle": "SEE OUR WORK",
+        "color": "red"
       },
       {
         "imgPath": "assets/images/Hero/bridge_bg.png",
         "title": "WE KEEP THINGS CLEAN AND SIMPLE",
         "subtitle": "So clean you'll go crazy wondering why it's so clean.",
-        "buttonTitle": "SEE OUR WORK"
+        "buttonTitle": "SEE OUR WORK",
+        "color": "red"
+      },
+      {
+        "imgPath": "assets/images/Hero/bridge_bg.png",
+        "title": "WE KEEP THINGS CLEAN AND SIMPLE",
+        "subtitle": "So clean you'll go crazy wondering why it's so clean.",
+        "buttonTitle": "SEE OUR WORK",
+        "color": "red"
       }
     ]
   },
