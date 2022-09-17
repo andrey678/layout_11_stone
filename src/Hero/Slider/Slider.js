@@ -13,7 +13,10 @@ const StyledSlider = styled.div`
 `;
 
 const Slider = ({ slides }) => {
+  // Ссылка на полосу слайдера
   const sliderElem = useRef();
+  // Сдвиг влево
+  const [leftOffset, setLeftOffset] = useState(0);
 
   // Ширина полосы слайдера
   const sliderWidth = useMemo(() => {
@@ -26,22 +29,21 @@ const Slider = ({ slides }) => {
     return windowWidth;
   }, []);
   // const leftScroll = sliderElem.current.scrollLeft;
-  const [leftOffset, setLeftOffset] = useState(0);
   console.log(windowWidth);
-
+  // Динамическое изменение ширины полоы слайдера
   useEffect(() => {
     sliderElem.current.style.width = sliderWidth + 'px';
   }, [sliderWidth]);
+  // Автоматический сдвиг влево полочы слайдера по указанному интервалу времени
   useEffect(() => {
     const interval = setInterval(() => {
       let step = parseInt(windowWidth);
-      // console.log(sliderElem.current.scrollLeft + 1);
-      setLeftOffset(parseInt(leftOffset) - step + 'px');
+      let leftPosition = parseInt(leftOffset);
+      // Сдвиг
+      setLeftOffset(leftPosition - step + 'px');
       sliderElem.current.style.left = leftOffset;
-      if (parseInt(leftOffset) == -(sliderWidth - windowWidth))
-        setLeftOffset(0);
-      console.log(leftOffset);
-      // sliderElem.current.scrollLeft += step + 'px';
+      // Переход к первому слайду после окончания полосы сладера
+      if (leftPosition == -(sliderWidth - windowWidth)) setLeftOffset(0);
     }, 3000);
     return () => clearInterval(interval);
   }, [leftOffset, windowWidth, sliderWidth]);
