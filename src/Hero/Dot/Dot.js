@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
 const StyledDot = styled.div`
@@ -10,6 +9,7 @@ const StyledDot = styled.div`
       colors: { heroSliderDotColor },
     },
   }) => heroSliderDotColor};
+  transition: background 0.8s ease-out 0s;
   &:hover {
     border: 1px solid white;
     cursor: pointer;
@@ -26,8 +26,6 @@ const StyledDot = styled.div`
 `;
 
 const Dot = (props) => {
-  //   const [dotActive, setDotActive] = useState(false);
-
   return <StyledDot {...props}></StyledDot>;
 };
 export default Dot;

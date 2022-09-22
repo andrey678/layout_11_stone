@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { useRef } from 'react';
 import Dot from '../Dot/Dot';
 
 const StyledDotsWrapper = styled.div`
@@ -10,8 +10,18 @@ const StyledDotsWrapper = styled.div`
   transform: translateX(-50%);
 `;
 
-const DotsWrapper = ({ slides }) => {
-  const dots = slides.map((dot, dotIndex) => <Dot key={dotIndex} />);
-  return <StyledDotsWrapper>{dots}</StyledDotsWrapper>;
+const DotsWrapper = ({ slides, currentSlide, goToSlide = (f) => f }) => {
+  // Ссылка на точки управления
+  const dotsElem = useRef();
+
+  const dots = slides.map((_, dotIndex) => (
+    <Dot
+      key={dotIndex}
+      dotActive={currentSlide == dotIndex}
+      onClick={() => goToSlide(dotIndex)}
+    />
+  ));
+
+  return <StyledDotsWrapper ref={dotsElem}>{dots}</StyledDotsWrapper>;
 };
 export default DotsWrapper;

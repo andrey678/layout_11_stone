@@ -1,14 +1,14 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import styled from 'styled-components';
 import Slide from '../Slide/Slide';
+import DotsWrapper from '../DotsWrapper/DotsWrapper';
 
 const StyledSlider = styled.div`
-  /* max-width: 100vw; */
-  /* height: 100vh; */
   position: relative;
-  left: 0;
+  left: ${({ leftOffset }) => leftOffset};
   display: flex;
+  flex-wrap: nowrap;
   transition: left 1s ease-out 0s;
 `;
 
@@ -17,41 +17,65 @@ const Slider = ({ slides }) => {
   const sliderElem = useRef();
   // Сдвиг влево
   const [leftOffset, setLeftOffset] = useState(0);
-
+  // Текущий слайд
+  const [currentSlide, setCurrentSlide] = useState(0);
   // Ширина полосы слайдера
-  const sliderWidth = useMemo(() => {
-    const sliderWidth = document.documentElement.clientWidth * slides.length;
-    return sliderWidth;
-  }, [slides.length]);
+  const sliderWidth = document.documentElement.clientWidth * slides.length;
   // Ширина окна(слайда)
-  const windowWidth = useMemo(() => {
-    const windowWidth = document.documentElement.clientWidth;
-    return windowWidth;
-  }, []);
-  // const leftScroll = sliderElem.current.scrollLeft;
-  console.log(windowWidth);
-  // Динамическое изменение ширины полоы слайдера
+  const windowWidth = document.documentElement.clientWidth;
+
+  // Переход на слайд соответствующий точке по нажатию
+  const goToSlide = (newSlideIndex) => {
+    setCurrentSlide(newSlideIndex);
+    setLeftOffset(-(newSlideIndex * windowWidth) + 'px');
+  };
+
   useEffect(() => {
-    sliderElem.current.style.width = sliderWidth + 'px';
-  }, [sliderWidth]);
-  // Автоматический сдвиг влево полочы слайдера по указанному интервалу времени
+    // Динамическое изменение ширины полоcы слайдера
+    const changeSliderWidth = () => {
+      const sliderWidth = windowWidth * slides.length;
+      sliderElem.current.style.width = sliderWidth + 'px';
+    };
+    changeSliderWidth();
+    window.addEventListener('resize', changeSliderWidth);
+    return () => window.removeEventListener('resize', changeSliderWidth);
+  }, [sliderWidth, slides.length, windowWidth]);
+  // Автоматический сдвиг влево полоcы слайдера по указанному интервалу времени
+
   useEffect(() => {
     const interval = setInterval(() => {
+      // Размер шага по ширине окна
       let step = parseInt(windowWidth);
+      // Текущий отступ слева
       let leftPosition = parseInt(leftOffset);
-      // Сдвиг
-      setLeftOffset(leftPosition - step + 'px');
-      sliderElem.current.style.left = leftOffset;
-      // Переход к первому слайду после окончания полосы сладера
-      if (leftPosition == -(sliderWidth - windowWidth)) setLeftOffset(0);
+      // Последний слайд
+      let lastSlide = slides.length - 1;
+      // Значение текущего индекса(Переход к первому слайду после окончания полосы сладера)
+      let slideIndex = currentSlide >= lastSlide ? 0 : currentSlide + 1;
+      // Переход на другой слайд по индексу (окрашивание точки)
+      setCurrentSlide(slideIndex);
+      // Сброс сдвига в 0 при окончании полосы слайдера.
+      if (leftPosition === -(lastSlide * step)) setLeftOffset(0);
+      // Сдвиг полосы слайдера влево.
+      setLeftOffset(-(slideIndex * step) + 'px');
     }, 3000);
+    // очистка intervalID после рендеринга
     return () => clearInterval(interval);
-  }, [leftOffset, windowWidth, sliderWidth]);
+  }, [currentSlide, leftOffset, windowWidth, sliderWidth, slides.length]);
 
-  const slideshow = slides.map((slide, slideIndex) => (
-    <Slide key={slideIndex} {...slide} />
-  ));
+  const slideshow = slides.map((slide) => <Slide key={slide.id} {...slide} />);
 
-  return <StyledSlider ref={sliderElem}>{slideshow}</StyledSlider>;
+  return (
+    <>
+      <StyledSlider leftOffset={leftOffset} ref={sliderElem}>
+        {slideshow}
+      </StyledSlider>
+      <DotsWrapper
+        slides={slides}
+        currentSlide={currentSlide}
+        goToSlide={goToSlide}
+      />
+    </>
+  );
 };
 export default Slider;

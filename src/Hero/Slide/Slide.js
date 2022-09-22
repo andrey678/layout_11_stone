@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 const StyledSlide = styled.div`
-  width: 100%;
+  width: 100vw;
   height: auto;
   background: ${(props) => `url('${props.imgPath}') 0 0/cover no-repeat`};
   padding: 67px;
+  flex-shrink: 0;
 
   & h1 {
     font-family: 'Roboto Condensed';

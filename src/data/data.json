@@ -18,6 +18,7 @@
   "hero": {
     "slides": [
       {
+        "id": "1",
         "imgPath": "assets/images/Hero/bridge_bg.png",
         "title": "WE KEEP THINGS CLEAN AND SIMPLE",
         "subtitle": "So clean you'll go crazy wondering why it's so clean.",
@@ -25,6 +26,7 @@
         "color": "red"
       },
       {
+        "id": "2",
         "imgPath": "assets/images/Hero/bridge_bg.png",
         "title": "WE KEEP THINGS CLEAN AND SIMPLE",
         "subtitle": "So clean you'll go crazy wondering why it's so clean.",
@@ -32,6 +34,7 @@
         "color": "red"
       },
       {
+        "id": "3",
         "imgPath": "assets/images/Hero/bridge_bg.png",
         "title": "WE KEEP THINGS CLEAN AND SIMPLE",
         "subtitle": "So clean you'll go crazy wondering why it's so clean.",

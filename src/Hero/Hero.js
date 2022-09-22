@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import DotsWrapper from './DotsWrapper/DotsWrapper';
+
 import Slider from './Slider/Slider';
 import SlidesWrapper from './SlidesWrapper/SlidesWrapper';
 
@@ -11,7 +11,6 @@ const Hero = ({ slides, children }) => {
     <StyledHero {...children}>
       <SlidesWrapper>
         <Slider slides={slides} />
-        <DotsWrapper slides={slides} />
       </SlidesWrapper>
     </StyledHero>
   );
