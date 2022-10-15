@@ -19,10 +19,10 @@ const Slider = ({ slides }) => {
   const [leftOffset, setLeftOffset] = useState(0);
   // Текущий слайд
   const [currentSlide, setCurrentSlide] = useState(0);
-  // Ширина полосы слайдера
-  const sliderWidth = document.documentElement.clientWidth * slides.length;
   // Ширина окна(слайда)
   const windowWidth = document.documentElement.clientWidth;
+  // Ширина полосы слайдера
+  const sliderWidth = windowWidth * slides.length;
 
   // Переход на слайд соответствующий точке по нажатию
   const goToSlide = (newSlideIndex) => {
