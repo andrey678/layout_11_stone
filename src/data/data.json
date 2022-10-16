@@ -62,9 +62,9 @@
       }
     ]
   },
-  "slogan": {
+  "callToAction": {
     "title": "The design process, at its best, integrates the aspirations of art, science, and culture.",
-    "imgPath": "assets/images/Slogan.seawaves_bg.png"
+    "imgPath": "assets/images/CallToAction/seawaves_bg.png"
   },
   "team": {
     "title": "THE TEAM",

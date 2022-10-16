@@ -12,7 +12,7 @@ const StyledServiceItem = styled.div`
       colors: { neutralTextColor },
     },
   }) => neutralTextColor};
-  & h1 {
+  & h2 {
     font-family: 'Roboto Condensed';
     font-size: 20px;
     line-height: 20px;
@@ -34,7 +34,7 @@ const StyledServiceItem = styled.div`
 const ServiceItem = ({ title, imgPath, text }) => {
   return (
     <StyledServiceItem>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <img src={imgPath} alt={title} />
       <p>{text}</p>
     </StyledServiceItem>

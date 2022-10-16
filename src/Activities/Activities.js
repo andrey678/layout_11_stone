@@ -6,6 +6,7 @@ import ServiceItem from './ServiceItem/ServiceItem';
 
 const StyledActivities = styled.section`
   padding: 80px 0;
+  width: 100vw;
   margin: 0 auto;
   background: ${({
     theme: {
