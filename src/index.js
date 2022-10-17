@@ -20,6 +20,7 @@ const defaultTheme = {
     heroButtonBackgroundColor: 'transparent',
     heroSliderDotColor: 'rgba(255, 255, 255, 0.4);',
     heroActiveSliderDotColor: 'rgba(255, 255, 255, 1);',
+    teamBackgroundColor: '#E5E5E5',
   },
   fonts: {
     robotoCondensedRegular: "'Roboto Condensed', sans-serif",

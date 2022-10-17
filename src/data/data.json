@@ -74,9 +74,21 @@
         "name": "Peter Walkin",
         "position": "Founder",
         "socialMediaLinks": [
-          { "facebook": "https://www.facebook.com" },
-          { "twitter": "https://www.twitter.com" },
-          { "linkedin": "https://www.linkedin.com" }
+          {
+            "name": "facebook link",
+            "url": "https://www.facebook.com/1",
+            "linkIconPath": "assets/images/Team/icons/facebookIcon.svg"
+          },
+          {
+            "name": "twitter link",
+            "url": "https://www.twitter.com/2",
+            "linkIconPath": "assets/images/Team/icons/twitterIcon.svg"
+          },
+          {
+            "name": "linkedin link",
+            "url": "https://www.linkedin.com/3",
+            "linkIconPath": "assets/images/Team/icons/linkedinIcon.svg"
+          }
         ]
       },
       {
@@ -84,9 +96,21 @@
         "name": "Robert Porter",
         "position": "Developer",
         "socialMediaLinks": [
-          { "facebook": "https://www.facebook.com" },
-          { "twitter": "https://www.twitter.com" },
-          { "linkedin": "https://www.linkedin.com" }
+          {
+            "name": "facebook link",
+            "url": "https://www.facebook.com/4",
+            "linkIconPath": "assets/images/Team/icons/facebookIcon.svg"
+          },
+          {
+            "name": "twitter link",
+            "url": "https://www.twitter.com/5",
+            "linkIconPath": "assets/images/Team/icons/twitterIcon.svg"
+          },
+          {
+            "name": "linkedin link",
+            "url": "https://www.linkedin.com/6",
+            "linkIconPath": "assets/images/Team/icons/linkedinIcon.svg"
+          }
         ]
       },
       {
@@ -94,10 +118,26 @@
         "name": "Dina Johnson",
         "position": "Designer",
         "socialMediaLinks": [
-          { "twitter": "https://www.twitter.com" },
-          { "behance": "https://www.behance.net" },
-          { "dribbble": "https://www.dribbble.com" },
-          { "instagram": "https://www.instagram.com" }
+          {
+            "name": "twitter link",
+            "url": "https://www.twitter.com/7",
+            "linkIconPath": "assets/images/Team/icons/twitterIcon.svg"
+          },
+          {
+            "name": "behance link",
+            "url": "https://www.behance.net/8",
+            "linkIconPath": "assets/images/Team/icons/behanceIcon.svg"
+          },
+          {
+            "name": "dribbble link",
+            "url": "https://www.dribbble.com/9",
+            "linkIconPath": "assets/images/Team/icons/dribbbleIcon.svg"
+          },
+          {
+            "name": "instagram link",
+            "url": "https://www.instagram.com/10",
+            "linkIconPath": "assets/images/Team/icons/instagramIcon.svg"
+          }
         ]
       }
     ]
