@@ -24,6 +24,10 @@ const defaultTheme = {
     testimonialsBackgroundColor: '#E5E5E5',
     testimonialsHeadingColor: 'rgba(50, 50, 50, 0.36)',
     testimonialsStripeColor: 'rgba(50, 50, 50, 0.18)',
+    footerTextColor: '#858585',
+    footerContactButtonColor: 'rgba(77, 77, 77, 0.2)',
+    footerFormBackgroundColor: 'rgba(0,0,0,0.6)',
+    closeFormButtonColor: '#FFFFFF',
   },
   fonts: {
     robotoCondensedRegular: "'Roboto Condensed', sans-serif",

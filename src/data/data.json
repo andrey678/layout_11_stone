@@ -159,6 +159,10 @@
     "imgPath": "assets/images/Footer/miniLogo.svg",
     "year": "2014",
     "companyName": "Stone Creative Agency",
+    "buttonText": "GET IN TOUCH WITH US",
+    "form": {
+      "closeImgPath": "assets/images/Footer/icons/closeIcon.svg"
+    },
     "companyEmailLink": "stone@example.com",
     "companyAddress": "1423 Elk St, Brooklyn NY, 82328"
   }
